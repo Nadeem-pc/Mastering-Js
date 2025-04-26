@@ -1,18 +1,3 @@
-//spread operators
-
-/*const globalPlayer={
-    id:0,
-    name:"bot",
-    powerlevel:100,
-};*/
-
-//const player1= {...globalPlayer};      //spread Operator
-/*const player1=Object.assign({},globalPlayer);  //method-2 object method
-player1.powerlevel=50;
-
-console.log(globalPlayer);
-console.log(player1);*/
-
 //immutable example
 
 /*let mystring="nadeem";
@@ -130,7 +115,7 @@ const she=[
 {
     id:2,
     name:"rajasherin",
-    age:16,
+    age:18,
 },
 
 ];
@@ -531,37 +516,32 @@ const she=[
 //  }
 //  binshad();
 
-//Finding unique elements using set method
 
-// let array=[1,2,3,4,5,8,2,1,3,4];
-// let sample=new Set(array);
-// console.log(sample);
+// const obj={
+//     id:0,
+//     name:"sherin",
+// };
+// const{name,id}=obj;
+// console.log(name,id);
 
-const obj={
-    id:0,
-    name:"sherin",
-};
-const{name,id}=obj;
-console.log(name,id);
-
-let me=function sm(){
-    hbvdf
-}
+// let me=function sm(){
+//     hbvdf
+// }
 
 
 //promise syntax
 
-let myPromise=new Promise((resolve,reject)=>{
-   //resolve("Success");
-   reject("Error");   
-});
-myPromise
-.then((res)=>{
-    console.log(res);
-})
-.catch((rej)=>{
-    console.log(rej); 
-});
+// let myPromise=new Promise((resolve,reject)=>{
+//    //resolve("Success");
+//    reject("Error");   
+// });
+// myPromise
+// .then((res)=>{
+//     console.log(res);
+// })
+// .catch((rej)=>{
+//     console.log(rej); 
+// });
 
 //HOF
 // const num=[1,2,3,5];
@@ -571,5 +551,176 @@ myPromise
 // console.log(doubled);
 
 
+//  function getFullName() {
+//     console.log(this.firstName )
+// }
 
+//     let person1 ={
+//         firstName : "nadeem",
+//         lastName : "Mohammed",
+//         age : 18
+//     }
+//     const {age,lastName} =person1
+//     console.log(lastName);
+    
+
+//     let person2 = {
+//         firstName : "binshad",
+//         lastName : "Op",
+//         age : 20
+//     }
+// let arr = [4,2,1,4,5,2,2,3]
+// let uniqueElements = [...new Set(arr)]
+// console.log(uniqueElements);
+
+// const numbers = [1, 2, 2, 3, 4, 4, 5];
+// const uniqueElements = numbers.filter((value, index, self) => self.indexOf(value) === self.lastIndexOf(value));
+// console.log(uniqueElements); 
+
+// function add (a){
+//    return a+2
+// }
+// function multi (b){
+// return b*2
+// }
+// function compose (val){
+//  return multi(add(val))
+// }
+// console.log(compose(10));
+// function * generator (){
+//     for(let i = 100 ; i>=5;i-=5){
+//         yield i
+//     }
+
+// }
+// let result = [...generator()]
+
+// console.log(result);
+
+// function hello(){
+
+//     let gg = 10;
+
+//     function hai(){
+
+//         console.log(gg)
+//     }
+//     hai()
+// }
+
+
+// hello()
+
+// console.log()   
+
+let pro1 = new Promise((res,rej)=>rej('data1'))
+let pro2 = new Promise((res,rej)=>res('data2'))
+let pro3 = new Promise((res,rej)=>res('data3'))
+let pro4 = new Promise((res,rej)=>rej('data4'))
+
+let val = Promise.allSettled([pro1,pro2,pro3,pro4])
+val.then((data)=>{
+    console.log(data);
+    
+}).catch((err)=>{
+    console.log("rejected",err)
+})
+
+// const fs = require('fs')
+// // fs.writeFile('index.txt',new Date().toString(),(err)=>{})
+
+
+// // factory function
+
+// function carFactory (name){
+//     return{
+//         car(){
+//             console.log(`the model is : ${name}`);
+//         }
+//     }
+//    }
+//    const bmw = carFactory("BMW")
+//    bmw.car()
+//    const gtr = carFactory("GTR")
+//    gtr.car()
+
+   // object.entries() use cases 
+
+//  1. Iterating over key-value pairs:
+// const user = {
+//     name: 'Nadeem',
+//     role: 'Full-stack Developer',
+//     experience: 2
+// };
+
+// for (const [key, value] of Object.entries(user)) {
+//     console.log(`${key}: ${value}`);
+// }
+
+// // 2. Converting an object to a different structure:
+// // const user = {
+// //     name: 'Nadeem',
+// //     role: 'Developer'
+// // };
+
+// const entries = Object.entries(user);
+// console.log(entries);
+
+// // 3. Filtering an object’s entries:
+// const scores = {
+//     alice: 50,
+//     bob: 85,
+//     carol: 75
+// };
+
+// const highScorers = Object.entries(scores).filter(([name, score]) => score > 70);
+// console.log(highScorers);
+
+// // 4. Converting back to an object using Object.fromEntries():
+// // const scores = {
+// //     alice: 50,
+// //     bob: 85,
+// //     carol: 75
+// // };
+
+// const highScorersArray = Object.entries(scores).filter(([name, score]) => score > 70);
+
+// // Convert back to object
+// const highScorersObj = Object.fromEntries(highScorersArray);
+// console.log(highScorersObj);
+
+// // Symbol datatype
+// const sym1 = Symbol.for("nadeem")
+// const sym2 = Symbol.for("nadeem")
+// console.log(sym1 === sym2)
+
+// // 1.for defining hidden properties in an Object
+// const secret = Symbol('secretKey')
+// const box = {
+//     one : 'visible',
+//     [secret] : "hidden"
+// }
+// console.log(box.one)
+// console.log(box[secret])
+
+// // 2.Unique Object Property Keys:
+// const mySymbol = Symbol('myUniqueKey');
+// const obj = {
+//     [mySymbol]: 'value'
+// };
+// console.log(obj[mySymbol]);  // 'value'
+
+// factory function
+
+//    function carFactory (name){
+//     return{
+//         car(){
+//             console.log(`the model is : ${name}`);
+//         }
+//     }
+//    }
+//    const bmw = carFactory("BMW")
+//    bmw.car()
+//    const gtr = carFactory("GTR")
+//    gtr.car()
 
