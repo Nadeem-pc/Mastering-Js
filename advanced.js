@@ -7,62 +7,19 @@ console.log(mystring);
 console.log(stringDupe);*/
 
 
-//spread operator with Array
-
-//const globalPlayer1=["nadeem" , "fidu"];
-//const globalPlayer2=["raja", "sherin"];
-
-//player1=globalPlayer1.concat(globalPlayer2);   //joining using normal concat method
-//const player1=[...globalPlayer1,...globalPlayer2];  //joining using spread operator
-//const player2=[...globalPlayer2, "Raja Sherin"];    //pushing a new value
- 
-
-//console.log(player1);
-//console.log(player2);
-//console.log(globalPlayer1);
-//console.log(globalPlayer2);
 
 
-//array destructrising
+                /* Regular or normal functions
 
-//const array=["nadeem","raja"];
-//const[first,second]=array;
-//console.log(second);
+                function sample(){
+                console.log("Skyline");
+                }
+                sample(); */
 
-//object destructurising
+                //Arrow function
 
-/*const she={
-    id:0,
-    name:"rajasherin",
-    age:16,
-};
-
-const {name,id} = she; 
-console.log(name,id); */
-
-//Rest
-
-/*const she={
-    id:0,
-    name:"rajasherin",
-    age:16,
-};
-const{id,...rest}=she;
-console.log(id);
-
-console.log(rest);*/
-
-/* Regular or normal functions
-
-function sample(){
-   console.log("Skyline");
-}
-sample(); */
-
-//Arrow function
-
-// let sample = () => console.log("GTR");
-// sample();
+                // let sample = () => console.log("GTR");
+                // sample();
 
 //ForEach
 
@@ -120,55 +77,28 @@ const she=[
 
 ];
 
-// const newArray=she.map((value) => value.name);
-// console.log(newArray);
 
-//Constructor Map
+                    //Constructor Map
 
-    // let val=new Map();
-    // val.set("num",1)
-    // val.set("nu",10)
-    // console.log(val);
+                        // let val=new Map();
+                        // val.set("num",1)
+                        // val.set("nu",10)
+                        // console.log(val);
 
-//if we do this same operation without map method.the synatax will be like this
+                    //if we do this same operation without map method.the synatax will be like this
 
-// let newArray=[];
-// for(let i=0;i<she.length;i++){
-//     newArray.push(she[i].name);
-// }
-// console.log(newArray);
+                    // let newArray=[];
+                    // for(let i=0;i<she.length;i++){
+                    //     newArray.push(she[i].name);
+                    // }
+                    // console.log(newArray);
 
-//filter 
 
-// const newArray =she.filter((value) => value.age===16);
-// console.log(newArray);
-
-//reduce
-
-// const arr=[1,2,3,27,10,5];
-// let sum=0;
-// const newArr=arr.reduce((sum,value) => value +sum,0);
-// console.log(newArr);
-
-//Find
-
-// const myObj=she.find((value) => value.name==="rajasherin");
-// console.log(myObj);
-
-//Sort method
-
-//const arr=[1,2,3,27,10,5,2006];
-// const desc=arr.sort((a,b) =>b-a );                    //for Descending order
-// console.log(desc);
-
-// const asc=arr.sort((a,b) => a-b);
-// console.log(asc);                                    //for Ascending order
+n
 
 
 //ES10
 
-// const nestedArr=[27,[10,2006],27,2727];
-// console.log(nestedArr.flat());
 
 //Reduce without using arrow function
 
@@ -279,7 +209,7 @@ const she=[
 
 // let result=(m,n) =>console.log(n+m);
  
-// //  result(10,20);
+//  result(10,20);
 
 // let div=(a,b) =>{
 //     let divide=a/b;
