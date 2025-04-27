@@ -363,43 +363,7 @@ n
 // getName.call(person1);
 // getName.call(person2);
 
-//Apply
 
-    // function getName(para1,para2){
-    //     console.log(this.name+" "+para1 +" "+para2);  
-    //  }
-     
-    //  let person1={
-    //      name:"Nadeem",
-    //     age:17,
-    //  };
-    
-    // let person2={
-    //    name:"Raja Sherin",
-    //     age:16,
-    // };
-    
-    //  getName.apply(person1 ,["Mohammed","Pc"]);
-    //  getName.apply(person2 ,["K","c"]);
-
-    //Bind
-
-    // function getName(){
-    //         console.log(this.name);  
-    //       }
-         
-    //     let person1={
-    //         name:"Nadeem",
-    //          age:17,
-    //      };
-        
-    //    let person2={
-    //        name:"Raja Sherin",
-    //        age:16,
-    //    };
-
-    //    const newGetName=getName.bind(person2);
-    //    newGetName();
 
     //Currying
 

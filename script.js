@@ -112,3 +112,35 @@ console.log(desc)
 // flat()
 const nestedArr = [1,3,[3,0],8,[4,9,2,3],0]
 console.log(nestedArr.flat())
+
+
+// Function Borrowing (call(), apply(), bind())
+
+// call()
+function printFullName () {
+    console.log(this.firstName + " " + this.secondName)
+}
+const user = {
+    firstName: 'Nadeem',
+    secondName: 'Mohammed'
+}
+printFullName.call(user)
+
+
+// apply()
+function addInitial (initial) {
+    console.log(this.name + " " + initial)
+}
+const user2 = {
+    name: 'Nadeem Mohammed',
+    age: 18
+}
+addInitial.apply(user2, ["Pc"])
+
+
+// bind()
+function getName () {
+    console.log(this.name)
+}
+const getUsername = getName.bind(user2)
+getUsername()
