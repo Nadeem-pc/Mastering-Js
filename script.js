@@ -144,3 +144,74 @@ function getName () {
 }
 const getUsername = getName.bind(user2)
 getUsername()
+
+
+// Currying
+function add (a) {
+    return function(b) {
+        return a + b
+    }
+}
+console.log(add(1)(2))
+
+function multiply (a) {
+    return function (b) {
+        return function (c) {
+            return a * b * c
+        }
+    }
+}
+console.log(multiply(1)(2)(3))
+
+
+// Callback hell
+function first (cb) {
+    setTimeout(() => {
+        console.log("First function is working")
+        cb()
+    },1000)
+}
+function second (cb) {
+    setTimeout(() => {
+        console.log("Second function is working")
+        cb()
+    },2000)
+}
+
+first(() => {
+    second(() => {
+        console.log('Task completed')
+    })
+})
+
+
+// Callback hell solving using promise()
+function first () {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('First task completed')
+            resolve()
+        }, 1000);
+    })
+}
+function second () {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Second task completed')
+            resolve()
+        },1000)
+    })
+}
+
+first()
+.then(() => second())
+.then(() => console.log("Task completed -using promise"))
+
+
+// Callback hell solving using async-await
+async function solve () {
+    await first()
+    await second()
+    console.log('Task completed -using async await')
+}
+solve()

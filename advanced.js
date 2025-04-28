@@ -7,8 +7,6 @@ console.log(mystring);
 console.log(stringDupe);*/
 
 
-
-
                 /* Regular or normal functions
 
                 function sample(){
@@ -21,61 +19,6 @@ console.log(stringDupe);*/
                 // let sample = () => console.log("GTR");
                 // sample();
 
-//ForEach
-
-// const she=[
-//     {
-//     id:0,
-//     name:"raja",
-//     age:16,
-// },
-
-// {
-//     id:1,
-//     name:"sherin",
-//     age:16,
-// },
-
-// {
-//     id:2,
-//     name:"rajasherin",
-//     age:16,
-// },
-
-// ];
-
-// for(let i=0;i<she.length;i++){
-//     console.log(she[i].name);              //normal way to print array using for loop
-//}
-
-// she.forEach(function(value,index,array){
-// console.log(value.name);                        //using forEach method
-// });
-
-// she.forEach((value,index,array) => console.log(value.name));             //simplified code using arrow 
-
-//Map
-
-const she=[
-    {
-    id:0,
-    name:"raja",
-    age:16,
-},
-
-{
-    id:1,
-    name:"sherin",
-    age:16,
-},
-
-{
-    id:2,
-    name:"rajasherin",
-    age:18,
-},
-
-];
 
 
                     //Constructor Map
@@ -93,8 +36,6 @@ const she=[
                     // }
                     // console.log(newArray);
 
-
-n
 
 
 //ES10
@@ -273,118 +214,7 @@ n
 // }
 // console.log(compose(5));
 
-//function borrowing
 
-// let obj={
-//     firstName:"Nadeem",
-//     lastName:"Mohammed",
-//     printfFullName:function(){
-//         console.log(this.firstName+ " "+this.lastName);
-        
-//     }
-// }
-// obj.printfFullName();
-
-// let obj2={
-//     firstName:"Mohammed",
-//     lastName:"Pc",
-// }
-// obj.printfFullName.call(obj2);
-
-//Call
-
-// let printfFullName=function(){
-//     console.log(this.firstName+ " "+this.lastName);
-// }
-
-// let name={
-//     firstName:"Nadeem",
-//     lastName:"Mohammed",
-// };
-// let name2={
-//     firstName:"Raja",
-//     lastName:"Sherin",
-// };
-// printfFullName.call(name);
-// printfFullName.call(name2);
-
-//This keyword in  global scope
-
-// console.log(this);
-
-//This keyword in function invokation
-
-// function sample(){
-//     console.log(this);
-// }
-// sample();
-
-//This keyword in method invokation
-
-// let obj={
-//     name:"Skyline",
-//     getName(){
-//         console.log(this);        
-//     },
-// };
-// obj.getName();
-
-// function getName(){
-//     console.log(this.name);
-// }
-
-// let obj1={
-//     name:"GTR",
-//     method:getName,
-// };
-
-// let obj2={
-//     name:"BMW M5 CS",
-//     method:getName,
-// };
-
-// obj1.method();
-// obj2.method();
-
-// function getName(){
-//     console.log(this.name);  
-// }
-
-// let person1={
-//     name:"Nadeem",
-//     age:17,
-// };
-
-// let person2={
-//     name:"Raja Sherin",
-//     age:16,
-// };
-
-// getName.call(person1);
-// getName.call(person2);
-
-
-
-    //Currying
-
-    // function add(a){
-    //     return function(b){
-    //         return a+b;
-    //     };
-    // } 
-    // console.log(add(1)(2));
-    
-    //another example with 3 arguments
-
-    // function multi(a){
-    //     return function(b){
-    //         return function(c){
-    //             return a*b*c;
-    //         };
-    //     };
-    // };
-    // console.log(multi(1)(2)(3));
-    
     //Explicit type casting(Conversion)
 
     // let num=String(27);
@@ -617,4 +447,3 @@ val.then((data)=>{
 //    bmw.car()
 //    const gtr = carFactory("GTR")
 //    gtr.car()
-
