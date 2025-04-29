@@ -215,3 +215,17 @@ async function solve () {
     console.log('Task completed -using async await')
 }
 solve()
+
+
+// Factory function
+function carFactory (name) {
+    return {
+        car() {
+            console.log(`The model is: ${name}`)
+        }
+    }
+}
+const bmw = carFactory('BMW M5')
+bmw.car()
+
+

@@ -249,7 +249,7 @@ console.log(stringDupe);*/
 // console.log(name,id);
 
 // let me=function sm(){
-//     hbvdf
+//     
 // }
 
 
@@ -433,17 +433,3 @@ val.then((data)=>{
 //     [mySymbol]: 'value'
 // };
 // console.log(obj[mySymbol]);  // 'value'
-
-// factory function
-
-//    function carFactory (name){
-//     return{
-//         car(){
-//             console.log(`the model is : ${name}`);
-//         }
-//     }
-//    }
-//    const bmw = carFactory("BMW")
-//    bmw.car()
-//    const gtr = carFactory("GTR")
-//    gtr.car()
