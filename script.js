@@ -229,3 +229,160 @@ const bmw = carFactory('BMW M5')
 bmw.car()
 
 
+// Calculating sum of numbers in a nested object
+const obj = {
+    a: 1,
+    b: {
+        c: 2,
+        d: {
+            e: 3,
+            f: 4
+        }
+    },
+    g: 5
+};
+
+function sumOfNested (obj) {
+    let sum = 0
+    
+    for(let key in obj){
+        if(typeof obj[key] === 'number'){
+            sum += obj[key]
+        }else if(typeof obj[key] === 'object'){
+            sum += sumOfNested(obj[key])
+        }
+    }
+
+    return sum
+}
+console.log('Sum is: ', sumOfNested(obj))
+
+// creating a file when promise resolving
+const fs = require('fs')
+
+const promise = new Promise((resolve, reject) => {
+    resolve(fs.writeFile('sample.txt', 'Here is the data', (err) => {
+        console.log('Page created successfully')
+    }))
+})
+
+//timer qatn
+let i = 0
+const timer = setInterval(() => {
+    console.log(i)
+    i++
+    if (i > 10){
+        clearInterval(timer)
+        i = 0
+        console.log(i)
+    }
+},1000)
+
+
+// generator fun for 5 
+function * multiplesOfFive () {
+    let i = 1
+    while(true){
+        yield i * 5
+        i++
+    }
+}
+let result = multiplesOfFive()
+console.log(result.next().value)
+console.log(result.next().value)
+
+
+// sum of prime 
+const isPrime = (n) => {
+    if(n <= 1) return false
+    for(let i = 2; i < n; i++){
+        if(n % i === 0) return false
+    }
+    return true
+}
+
+const sumOfPrime = (arr) => {
+    let sum = 0
+    for(let num of arr){
+        if(isPrime(num)){
+            sum += num
+        }
+    }
+    return sum
+}
+console.log(sumOfPrime([1,2,3,4,5,6]))
+
+
+// secnd largest from an unsorted array
+const secondLargest = (arr) => {
+    let largest = -Infinity
+    let secondLargest = -Infinity
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] > largest){
+            secondLargest = largest
+            largest = arr[i]
+        }else if(arr[i] < largest && arr[i] > secondLargest){
+            secondLargest = arr[i]
+        }
+    }
+    return secondLargest
+}
+console.log(secondLargest([1,5,3,17,5,9]))
+
+
+// hoc
+import React from 'react'
+
+const Hello = (Component) => {
+    return function Enhanced(props) {
+        return (
+            <>
+                <h1>hello</h1>
+                <Component {...props} />
+            </>
+        )
+    }
+}
+
+const Welcome = () => {
+    return <h1>Welcome</h1>
+}
+
+const HelloWelcome = Hello(Welcome)
+
+const app = () => {
+  return (
+    <HelloWelcome/>
+  )
+}
+
+export default app
+
+
+// component unmount notificaton
+import React, { useEffect, useState } from 'react'
+
+
+const App = () => {
+    const [on, setOn] = useState(true)
+
+    useEffect(() => {
+        return(() => {
+            alert('Are you sure')
+        })
+    },[on])
+
+    return (
+        <>
+            {on && <Child1 />}
+            <button onClick={() => setOn(false)}>Click</button>
+        </>
+    )
+}
+export default App
+
+const Child1 = () => {
+    return (
+        <div>Hello iam child</div>
+    )
+}

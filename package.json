@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "advanced.js",
   "scripts": {
-    "start": "nodemon advanced"
+    "start": "nodemon parent"
   },
   "author": "",
   "license": "ISC",
