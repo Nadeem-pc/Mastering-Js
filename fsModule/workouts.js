@@ -55,11 +55,9 @@ fs.unlink('delete.txt', (err) => {
 })
 
 // Write a file when a Promise resolves,
-
 const fs = require('fs').promises;
 
-// Function that returns a promise
-function writeFilePromise(filename, content) {
+function writeFile(content) {   // Function that returns a promise
     return new Promise((resolve, reject) => {
         const taskCompleted = true;
 
@@ -71,8 +69,7 @@ function writeFilePromise(filename, content) {
     });
 }
 
-// Use the promise and write to the file when resolved
-writeFilePromise("example.txt", "Hello, this is the file content.")
+writeFile("Hello, this is the file content.")   // Use the promise and write to the file when resolved
     .then((content) => {
         return fs.writeFile("examplee.txt", content);
     })
