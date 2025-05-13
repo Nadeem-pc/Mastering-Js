@@ -43,9 +43,14 @@ fs.rmdir('delete', (err) => {
     console.log('folder deleted successfully')
 })
 
-// for creating a new folder just change rmdir -> mkdir
+// Creating a new folder 
+fs.mkdir('newFolder', (err) => {
+    if (err) throw err;
+    console.log('folder created successfully')
+})
 
-// deleting a file
+
+// Deleting a file
 fs.unlink('delete.txt', (err) => {
     console.log('File deleted successfully')
 })
