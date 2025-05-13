@@ -49,8 +49,36 @@ fs.mkdir('newFolder', (err) => {
     console.log('folder created successfully')
 })
 
-
 // Deleting a file
 fs.unlink('delete.txt', (err) => {
     console.log('File deleted successfully')
 })
+
+// Write a file when a Promise resolves,
+
+const fs = require('fs').promises;
+
+// Function that returns a promise
+function writeFilePromise(filename, content) {
+    return new Promise((resolve, reject) => {
+        const taskCompleted = true;
+
+        if (taskCompleted) {
+            resolve(content);
+        } else {
+            reject("Task failed.");
+        }
+    });
+}
+
+// Use the promise and write to the file when resolved
+writeFilePromise("example.txt", "Hello, this is the file content.")
+    .then((content) => {
+        return fs.writeFile("examplee.txt", content);
+    })
+    .then(() => {
+        console.log("File written successfully!");
+    })
+    .catch((error) => {
+        console.error("An error occurred:", error);
+    });
