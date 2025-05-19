@@ -313,7 +313,7 @@ const sumOfPrime = (arr) => {
 console.log(sumOfPrime([1,2,3,4,5,6]))
 
 
-// secnd largest from an unsorted array
+// second largest from an unsorted array
 const secondLargest = (arr) => {
     let largest = -Infinity
     let secondLargest = -Infinity
@@ -340,6 +340,21 @@ const frequency = arr.reduce((acc, val) => {
 
 const unique = arr.filter(num => frequency[num] === 1)
 console.log(unique)
+
+
+// Remove duplicates from an array without using any inbuilt methods
+for(let i = 0; i < arr.length; i++){
+  for(let j = i + 1; j < arr.length; j++){
+    if(arr[i] === arr[j]){
+      for(let k = j; k < arr.length -1; k++){
+        arr[k] = arr[k + 1]
+      }
+      arr.length --
+      j--
+    }
+  }
+}
+console.log(arr)
 
 
 // hoc
