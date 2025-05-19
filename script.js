@@ -330,6 +330,18 @@ const secondLargest = (arr) => {
 console.log(secondLargest([1,5,3,17,5,9]))
 
 
+// unique elements in an array using HOFs
+const arr = [1, 2, 3, 4, 5, 4, 5]
+
+const frequency = arr.reduce((acc, val) => {
+  acc[val] = (acc[val] || 0) + 1
+  return acc
+}, {})
+
+const unique = arr.filter(num => frequency[num] === 1)
+console.log(unique)
+
+
 // hoc
 import React from 'react'
 
