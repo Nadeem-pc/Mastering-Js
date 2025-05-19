@@ -357,6 +357,30 @@ for(let i = 0; i < arr.length; i++){
 console.log(arr)
 
 
+// Reverse each word in a string
+let str = 'hello world'
+let result = ""
+let word = ""
+
+for(let i = 0; i <= str.length; i++){
+  const char = str[i]
+  if(char === " " || i === str.length){
+    
+    for(let j = word.length - 1; j >= 0; j--){
+      result += word[j]
+    }
+    
+    if(char === " ") result += " "
+    word = ""
+  }
+  else{
+    word += char
+  }
+}
+
+console.log(result)
+
+
 // hoc
 import React from 'react'
 
