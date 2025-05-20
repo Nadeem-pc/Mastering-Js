@@ -381,6 +381,59 @@ for(let i = 0; i <= str.length; i++){
 console.log(result)
 
 
+// Prefix sum of array 
+const arr = [1, 2, 3, 4]
+let prefixSum = []
+let sum = 0
+for(let i = 0; i < arr.length; i++){
+  sum += arr[i]
+  prefixSum[i] = sum
+}
+console.log(prefixSum)
+
+
+// Merge and remove Duplicates from the array
+const arr1 = [1, 2, 3]
+const arr2 = [3, 4, 5]
+
+for(let i = 0; i < arr2.length; i++){
+  let isDuplicate = false
+  for(let j = 0; j < arr1.length; j++){
+    if(arr2[i] === arr1[j]){
+      isDuplicate = true
+      break
+    }
+  }
+  
+  if(!isDuplicate){
+    arr1[arr1.length] = arr2[i]
+  }
+}
+console.log(arr1)
+
+// Capitalize first letter of all words in a sentence
+const sentence = 'hello world'
+
+const result = sentence
+.split(' ')
+.map(word => word[0].toUpperCase() + word.slice(1))
+.join(' ')
+
+console.log(result)
+
+// sum of elements using recursion
+function sum(arr, n) {
+    // Base case
+    if (n === 0) return 0;
+    // Recursive case
+    return arr[n - 1] + sum(arr, n - 1);
+}
+
+const array = [1, 2, 3, 4, 5];
+const result = sum(array, array.length);
+console.log("Sum of array elements:", result);
+  
+
 // hoc
 import React from 'react'
 
